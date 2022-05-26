@@ -1,0 +1,21 @@
+
+```{r}
+library(openxlsx)
+```
+
+```{r}
+setwd("yourfilelocation")
+```
+
+```{r}
+
+files <- list.files(pattern="*.xlsx") 
+
+```
+
+```{r}
+df <- lapply(files,readWorkbook) %>% bind_rows()
+```
+
+
+
